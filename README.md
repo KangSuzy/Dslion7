@@ -14,7 +14,7 @@
 >$ django-admin startproject (firstproject)    
 5. app 만들기    
 >$ python manage.py startapp (myapp)    
->settings.py/INSTALLED_APPS[    
+>>settings.py/INSTALLED_APPS[    
 >>		‘appname.apps.AppnameConfig’    
 >>						]    
 >$ python manage.py runserver <-> ctrl+C    
@@ -25,7 +25,7 @@
 >>	return render(request, ‘home.html’)    
 8. url 작성하기
 >urls.py import myapp.views //작성해놓은 함수를 사용하기 위해    
->urlpatterns = [...    
+>>urlpatterns = [...    
 >>			path(‘’, myapp.views.home, name=’home’),
 >>			...	]    
 
