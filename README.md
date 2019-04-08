@@ -1,6 +1,6 @@
 # Dslion7-Django 
 
-; 파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크    
+파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크    
 
 ## 시작하기    
 
@@ -15,19 +15,19 @@
 5. app 만들기    
 >$ python manage.py startapp (myapp)    
 >settings.py/INSTALLED_APPS[    
->>>>		‘appname.apps.AppnameConfig’    
-						]    
+>>		‘appname.apps.AppnameConfig’    
+>>						]    
 >$ python manage.py runserver <-> ctrl+C    
 6. templates 만들기    
 >(myapp)/templates/(home).html    
 7. view 함수 만들기
 >def home(request):    
->>>>	return render(request, ‘home.html’)    
+>>	return render(request, ‘home.html’)    
 8. url 작성하기
 >urls.py import myapp.views //작성해놓은 함수를 사용하기 위해    
 >urlpatterns = [...    
->>>>			path(‘’, myapp.views.home, name=’home’),
->>>>			...	]    
+>>			path(‘’, myapp.views.home, name=’home’),
+>>			...	]    
 
 ## template extending / inheritance    
 
@@ -40,7 +40,7 @@
 
 ## static files    
 
-;웹사이트의 고정된 파일들 ex) CSS JS Image ...    
+웹사이트의 고정된 파일들 ex) CSS JS Image ...    
 
 1) settings.py/ INSTALL_APPS[..., ‘django.contrib.staticfiles’, ...] 확인    
 2) settings.py/ STATIC_URL = ‘/static/’ 확인    
