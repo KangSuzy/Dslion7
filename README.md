@@ -6,29 +6,47 @@
 
 1. 작업 디렉토리 생성    
 2. 가상환경 생성 및 실행 
->$ python –m venv (myvenv)
->$ source (myvenv)/Scripts/activate <-> deactivate
+``` bash
+$ python –m venv (myvenv)
+$ source (myvenv)/Scripts/activate <-> deactivate
+```
 3. 장고 설치    
->$ pip install django
-4. 프로젝트 생성    
->$ django-admin startproject (firstproject)    
-5. app 만들기    
->$ python manage.py startapp (myapp)    
->settings.py/INSTALLED_APPS[    
->>		‘appname.apps.AppnameConfig’    
->						]    
->$ python manage.py runserver <-> ctrl+C    
-6. templates 만들기    
->(myapp)/templates/(home).html    
-7. view 함수 만들기
->def home(request):    
->>	return render(request, ‘home.html’)    
-8. url 작성하기
->urls.py import myapp.views //작성해놓은 함수를 사용하기 위해    
->urlpatterns = [...    
->>			path(‘’, myapp.views.home, name=’home’),
->			...	]    
+``` bash
+$ pip install django    
+```
 
+4. 프로젝트 생성    
+``` bash
+$ django-admin startproject (firstproject)    
+```
+5. app 만들기    
+``` bash
+$ python manage.py startapp (myapp)    
+```
+``` python
+settings.py/INSTALLED_APPS[    
+		‘appname.apps.AppnameConfig’    
+						]    
+```
+``` bash
+$ python manage.py runserver <-> ctrl+C    
+```
+6. templates 만들기    
+``` bash
+(myapp)/templates/(home).html    
+```
+7. view 함수 만들기
+``` python
+def home(request):    
+	return render(request, ‘home.html’)    
+```
+8. url 작성하기
+``` python
+urls.py import myapp.views #작성해놓은 함수를 사용하기 위해    
+urlpatterns = [...    
+			path(‘’, myapp.views.home, name=’home’),
+			...	]    
+```
 ## template extending / inheritance    
 
 중복되는 코드를 한꺼번에 관리하는 방법    
